@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>my memory!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="navigate">
+    <img style="background: none;border-radius: 10px;" width="50px" height="50px" src="logo2.png" /><img src="label.png" width="300px" height="50px" style="position: absolute;left: 50px;top: 0px;">
+    
+    <button id="addFileBtn" style="position: absolute;right: 220px;top: 0px;width: 150px;height:50px;background: linear-gradient(45deg, #fff, gold);font-size: 110%;font-weight: 100;border-radius: 10px;border: 1px solid black;" onclick="document.getElementById('createObjectWin').style.display = 'block'">+добавить</button>
+    
+    <div id="acPole" class="accauntPole">
+      <p align="center" id="name">—</p>
+      <img id="img" style="position: absolute;right: 10px;width: 50px;height: 50px; background:#555;border-radius: 100%;" />
+    </div>
+  </div>
+  
+  
+  <div id="surface" class="surface">
+    
+  </div>
+  
+  <div id="editProfilWin">
+    <button id="closeprof" style="position: absolute;width: 30px;height: 30px;background: white;border: 1px solid black;border-radius: 5px;font-size: 20px;font-weight: 100;">×</button>
+    <h1 style="position:absolute;background: #ddd;border-radius: 10px;font-size: 400%;width: 100%;top: 10px;" id="nameprof">name</h1>
+    
+    <div style="position: absolute;left: calc(50% - 40%);width: 80%;height: 300px;background: none;border: 1px dashed black;top: 200px;">
+      
+      <img width="200px" height="200px" id="img2" style="position: absolute;left: calc(50% - 100px);border-radius: 100%;" />
+      
+      <input style="position: absolute;width: 70%;left: 15%;background: grey;border-radius: 14px;height: 50px;align-content:center;vertical-align: center; bottom: 10px;" type="file" id="fileInput" />
+      <h1>фото профиля: </h1>
+      <h1 style="position: absolute;top: 300px;">О себе: </h1>
+      <textarea style="position: absolute;top: 400px;width: 70%;left: 15%;margin-bottom: 100px;" id="description" rows="8" cols="40"></textarea>
+      
+      <button onclick="saveDescr()" type="submit" style="width: 80%;position: absolute;left: 10%;top: 600px;">сохронить описание</button>
+      
+      <button onclick="deleteAccaunt()" style="
+        position: absolute;
+        width: 20%;
+        left: 40%;
+        background: #700;
+        color: #f00;
+        border: 2px solid #000;
+        top: 700px;
+        border-radius: 20px;
+      ">удалить аккаунт</button>
+    </div>
+  </div>
+  
+  <div style="width: 90%; height: 90%; position: fixed;background: #fdc;left: 5%;top: 5%;border: 5px dashed #965;display: none;" id="createObjectWin">
+    
+    <button onclick="document.getElementById('createObjectWin').style.display = 'none'" id="closeObjCreate" style="position: absolute;width: 50px;height: 50px;background: white;border: 1px solid black;border-radius: 5px;font-size: 20px;font-weight: 100;z-index: 100;">×</button>
+    
+    <p style="position: absolute;width: 100%;text-align: center;">
+      
+      <input style="position: absolute;left: 100px;width:115px;padding-left: 10%;background: none;" type="file" id="objectFileOp" />
+      
+      - картинка (должно быть > 0 Б "больше")
+    </p>
+    <img src="" style="position: absolute;width: 100px;height: 100px;left: calc(50% - 50px);top: 100px;" id="opObjImgPre" />
+    <input type="text" placeholder="имя объекта" id="nameobj" />
+    
+    <button style="
+      position: absolute;
+      bottom: 50px;
+      background: #88f;
+      width: 50%;
+      left: 25%;
+      height: 50px;
+      font-size: 110%;
+      font-weight: 100;
+      border: 3px dashed #669;
+      border-radius: 20px;
+    " onclick="saveObject(idGet('nameobj').value, idGet('opObjImgPre').src)">создать</button>
+    <button style="position: fixed;top: 100px;" onclick="downloadImage('https://avatars.mds.yandex.net/i?id=0ef4d694d8f01cfbcad450feb8ec41c02fe081f2-10128543-images-thumbs&n=13')">akskakkakakakakak</button>
+    
+  </div>
+  
+  
+  <script>
+
+  </script>
+  <script src="main.js"></script>
+  <script>
+  
+  </script>
+</body>
+
+</html>
